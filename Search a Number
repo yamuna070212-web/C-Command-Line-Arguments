@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    int i, key;
+
+    if(argc < 3)
+    {
+        printf("Usage: program.exe key num1 num2 ...\n");
+        return 1;
+    }
+
+    key = atoi(argv[1]);
+
+    for(i = 2; i < argc; i++)
+    {
+        if(atoi(argv[i]) == key)
+        {
+            printf("Found\n");
+            return 0;
+        }
+    }
+
+    printf("Not Found\n");
+
+    return 0;
+}
+Run
+program.exe 25 10 20 25 40
+Output
+Found

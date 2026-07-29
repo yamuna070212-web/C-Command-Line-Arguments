@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    if(argc != 3)
+    {
+        printf("Usage: program.exe num1 num2\n");
+        return 1;
+    }
+
+    int a = atoi(argv[1]);
+    int b = atoi(argv[2]);
+
+    if(a > b)
+        printf("Largest = %d\n", a);
+    else
+        printf("Largest = %d\n", b);
+
+    return 0;
+}
+Run
+program.exe 45 20
+Output
+Largest = 45

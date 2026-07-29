@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    if(argc < 2)
+    {
+        printf("Usage: program.exe num1 num2 ...\n");
+        return 1;
+    }
+
+    int i, sum = 0;
+
+    for(i = 1; i < argc; i++)
+    {
+        sum += atoi(argv[i]);
+    }
+
+    printf("Average = %.2f\n", (float)sum / (argc - 1));
+
+    return 0;
+}
+Run
+program.exe 10 20 30 40
+Output
+Average = 25.00

@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    int sum = 0;
+
+    for(int i = 1; i < argc; i++)
+    {
+        int num = atoi(argv[i]);
+
+        if(num % 2 == 0)
+            sum += num;
+    }
+
+    printf("Sum of Even Numbers = %d\n", sum);
+
+    return 0;
+}
+Run
+program.exe 2 5 8 11 10
+Output
+Sum of Even Numbers = 20

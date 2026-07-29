@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[])
+{
+    char str[100];
+
+    if(argc != 3)
+    {
+        printf("Usage: program.exe string1 string2\n");
+        return 1;
+    }
+
+    strcpy(str, argv[1]);
+    strcat(str, argv[2]);
+
+    printf("Merged String = %s\n", str);
+
+    return 0;
+}
+Run
+program.exe Hello World
+Output
+Merged String = HelloWorld

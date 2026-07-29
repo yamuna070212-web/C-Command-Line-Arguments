@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    if(argc != 3)
+    {
+        printf("Usage: program.exe base exponent\n");
+        return 1;
+    }
+
+    int base = atoi(argv[1]);
+    int exp = atoi(argv[2]);
+
+    int result = 1, i;
+
+    for(i = 1; i <= exp; i++)
+        result *= base;
+
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+Run
+program.exe 2 5
+Output
+Result = 32
